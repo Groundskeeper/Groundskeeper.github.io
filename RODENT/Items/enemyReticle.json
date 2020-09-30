@@ -1,0 +1,81 @@
+{
+	"name": "enemyReticle",
+	"spritesheet": ".\\Images\\SpriteSheet_EnemyMissile.png",
+	"maxHealth": 1,
+	"health": 1,
+	"x": 0,
+	"y": 0,
+	"movementSpeed": 0,
+	"maxLifespan": 3,
+	"lifespan": 3,
+	"active": false,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 0.4,
+					"anchorpoint": {
+						"x": 525,
+						"y": 154
+					},
+					"animation": {
+						"x": 434,
+						"y": 121,
+						"width": 182,
+						"height": 79
+					},
+					"hitbox": {
+						"x": 434,
+						"y": 121,
+						"width": 182,
+						"height": 79
+					}
+				},
+				{
+					"duration": 0.4,
+					"anchorpoint": {
+						"x": 525,
+						"y": 238
+					},
+					"animation": {
+						"x": 434,
+						"y": 205,
+						"width": 182,
+						"height": 79
+					},
+					"hitbox": {
+						"x": 434,
+						"y": 205,
+						"width": 182,
+						"height": 79
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 0,
+					"anchorpoint": {
+						"x": 0,
+						"y": 0
+					},
+					"animation": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		}
+	},
+	"ai": "this.lifespan -= (gsGame.speedfactor != 1) ? (gameEngine.timeslice * gsGame.speedfactor) : gameEngine.timeslice;\n\n\t\t\tif (this.lifespan <= 0){\n\t\t\t\tLog(gsGame.timestamp + \" - \" + \"reticle lifespan expired\");\n\t\t\t\tthis.changeState(\"dying\");\n\t\t\t}",
+	"collided": "// Only \"take damage\" against the enemyMissile\n\t\t\tif (gsGame.worldObjects[idOfItemCollidedWith].name == \"enemyMissile\")\n\t\t\t\tthis.health--;"
+}

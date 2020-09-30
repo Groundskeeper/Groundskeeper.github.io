@@ -1,0 +1,538 @@
+{
+	"name": "enemyVehiclePink",
+	"spritesheet": ".\\Images\\SpriteSheet_VehiclesPink.png",
+	"maxHealth": 100,
+	"health": 100,
+	"x": 0,
+	"y": 300,
+	"movementSpeed": 5,
+	"active": false,
+	"rateoffire": 1,
+	"lasttimebulletfired": 0,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 146,
+						"y": 78
+					},
+					"animation": {
+						"x": 1,
+						"y": 4,
+						"width": 309,
+						"height": 159
+					},
+					"hitbox": {
+						"x": 1,
+						"y": 4,
+						"width": 309,
+						"height": 159
+					}
+				}
+			]
+		},
+		"prep_car_passing" : {
+			"frames": [
+				{
+					"duration": 1.6,
+					"anchorpoint": {
+						"x": 146,
+						"y": 78
+					},
+					"animation": {
+						"x": 1,
+						"y": 4,
+						"width": 309,
+						"height": 159
+					},
+					"hitbox": {
+						"x": 1,
+						"y": 4,
+						"width": 309,
+						"height": 159
+					},
+					"executeonfinish": "this.changeState(\"car_passing\");"
+				}
+			]
+		},
+		"car_passing" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 146,
+						"y": 78
+					},
+					"animation": {
+						"x": 1,
+						"y": 4,
+						"width": 309,
+						"height": 159
+					},
+					"hitbox": {
+						"x": 1,
+						"y": 4,
+						"width": 309,
+						"height": 159
+					}
+				}
+			]
+		},
+		"robot_idle" : {
+			"frames": [
+				{
+					"duration": 4.0,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					}
+				}
+			]
+		},
+		"robot_leaving" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					}
+				}
+			]
+		},
+		"robot_look_left" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 468,
+						"y": 114
+					},
+					"animation": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					}
+				}
+			]
+		},
+		"robot_look_right" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 846,
+						"y": 114
+					},
+					"animation": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					}
+				}
+			]
+		},
+		"robot_shoot_down" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"bulletorigin": {
+						"x": 607,
+						"y": 127
+					}
+				}
+			]
+		},
+		"robot_shoot_left" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 468,
+						"y": 114
+					},
+					"animation": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"bulletorigin": {
+						"x": 313,
+						"y": 126
+					}
+				}
+			]
+		},
+		"robot_shoot_right" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 846,
+						"y": 114
+					},
+					"animation": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"bulletorigin": {
+						"x": 901,
+						"y": 126
+					}
+				}
+			]
+		},
+		"robot_dying" : {
+			"frames": [
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 468,
+						"y": 114
+					},
+					"animation": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 846,
+						"y": 114
+					},
+					"animation": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 468,
+						"y": 114
+					},
+					"animation": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 846,
+						"y": 114
+					},
+					"animation": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 468,
+						"y": 114
+					},
+					"animation": {
+						"x": 316,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 846,
+						"y": 114
+					},
+					"animation": {
+						"x": 763,
+						"y": 2,
+						"width": 236,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 657,
+						"y": 133
+					},
+					"animation": {
+						"x": 562,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"executeonfinish": "this.changeState(\"robot_dead\");\n\n\t\t\t\t\t\t// Check to see if all the enemyVehicles are \"robot_dead\". If they are then switch them all to \"dying\".\n\t\t\t\t\t\tif (gsGame.enemyVehiclePinkObj.curState == \"robot_dead\" && gsGame.enemyVehicleYellowObj.curState == \"robot_dead\" && gsGame.enemyVehicleBlackObj.curState == \"robot_dead\" && gsGame.enemyVehicleBlueObj.curState == \"robot_dead\" && gsGame.enemyGorillaObj.curState == \"robot_dead\"){\n\t\t\t\t\t\t\t gsGame.enemyVehiclePinkObj.changeState(\"dying\");\n\t\t\t\t\t\t\t gsGame.enemyVehicleYellowObj.changeState(\"dying\");\n\t\t\t\t\t\t\t gsGame.enemyVehicleBlackObj.changeState(\"dying\");\n\t\t\t\t\t\t\t gsGame.enemyVehicleBlueObj.changeState(\"dying\");\n\t\t\t\t\t\t\t gsGame.enemyGorillaObj.changeState(\"dying\");\n\t\t\t\t\t\t}"
+				}
+			]
+		},
+		"robot_dead" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 1103,
+						"y": 133
+					},
+					"animation": {
+						"x": 1008,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 1103,
+						"y": 133
+					},
+					"animation": {
+						"x": 1008,
+						"y": 2,
+						"width": 191,
+						"height": 167
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		}
+	},
+	"ai": "if (this.curState.indexOf(\"robot\") != -1 && this.curState != \"dying\"){\n\t\t\t\tthis.x = gsGame.enemyVehicleYellowObj.x - (gsGame.enemyVehicleYellowObj.x - gsGame.enemyVehicleYellowObj.headposX);\n\t\t\t\tthis.y = gsGame.enemyVehicleYellowObj.y - (gsGame.enemyVehicleYellowObj.y - gsGame.enemyVehicleYellowObj.headposY);\n\t\t\t}\n\t\t\telse{\n\t\t\t\tthis.speedX = 0;\n\t\t\t\tthis.speedY = 0;\n\t\t\t}\n\n\t\t\tswitch(this.curState){\n\t\t\t\tcase \"idle\":\n\t\t\t\t\tvar vehicle = this;\n\t\t\t\t\tthis.moveToCoordinate(!vehicle.movingRight ? 140 : 200, this.y, !vehicle.movingRight ? 5 : 10, 0, function(){ vehicle.movingRight = !vehicle.movingRight; });\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"prep_car_passing\":\n\t\t\t\t\t// Just sit there for a second and then changeState into car_passing. So put in an executeonfinish in the final frame of this state to changeState(\"car_passing\")\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"car_passing\":\n\t\t\t\t\tvar vehicle = this;\n\t\t\t\t\t// Speed off screen\n\t\t\t\t\tthis.moveToCoordinate(1500, this.y, 30, 0, function(){ \n\t\t\t\t\t\t// Deactivate this object\n\t\t\t\t\t\tvehicle.active = false;\n\t\t\t\t\t\t// See if there are any other vehicles alive. If not, then let's play the transforming sound\n\t\t\t\t\t\tif (!gsGame.enemyVehiclePinkObj.active && !gsGame.enemyVehicleYellowObj.active && !gsGame.enemyVehicleBlackObj.active && !gsGame.enemyVehicleBlueObj.active && !gsGame.enemyGorillaObj.active){\n\t\t\t\t\t\t\tgameEngine.soundArray[\"Transforming\"].play();\n\t\t\t\t\t\t}\n\t\t\t\t\t});\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"robot_idle\":\n\t\t\t\tcase \"robot_leaving\":\n\t\t\t\tcase \"robot_look_right\":\n\t\t\t\tcase \"robot_look_left\":\n\t\t\t\t\tif (gsGame.playerObj.x - this.x > 60){\n\t\t\t\t\t\tthis.changeState(\"robot_look_right\");\n\t\t\t\t\t}\n\t\t\t\t\telse if (gsGame.playerObj.x - this.x < -60){\n\t\t\t\t\t\tthis.changeState(\"robot_look_left\");\n\t\t\t\t\t}\n\t\t\t\t\telse{\n\t\t\t\t\t\tthis.changeState(\"robot_idle\");\n\t\t\t\t\t}\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"robot_shoot_down\":\n\t\t\t\tcase \"robot_shoot_right\":\n\t\t\t\tcase \"robot_shoot_left\":\n\t\t\t\t\tvar direction = \"shoot_down\";\n\n\t\t\t\t\t// Determine where it's gonna look while shooting\n\t\t\t\t\tif (gsGame.playerObj.x - this.x > 60){\n\t\t\t\t\t\tthis.changeState(\"robot_shoot_right\");\n\t\t\t\t\t\tdirection = \"shoot_downright\";\n\t\t\t\t\t}\n\t\t\t\t\telse if (gsGame.playerObj.x - this.x < -60){\n\t\t\t\t\t\tthis.changeState(\"robot_shoot_left\");\n\t\t\t\t\t\tdirection = \"shoot_downleft\";\n\t\t\t\t\t}\n\t\t\t\t\telse{\n\t\t\t\t\t\tthis.changeState(\"robot_shoot_down\");\n\t\t\t\t\t}\n\n\t\t\t\t\tvar lastTime = this.lastTimeBulletFired;\n\t\t\t\t\tthis.Shoot(direction, this.bulletOriginX, this.bulletOriginY);\n\t\t\t\t\tthis.lastTimeBulletFired = lastTime;\n\t\t\t\t\tthis.Shoot(direction, this.bulletOriginX + 101, this.bulletOriginY);\n\n\t\t\t\t\tthis.changeState(\"robot_idle\");\n\t\t\t\t\t\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"robot_dying\":\n\t\t\t\t\t// Just play a bunch of explosions for the duration of the dying frame within the bounds of the hitbox\n\t\t\t\t\t// When finished on that frame then do a changeState(\"robot_dead\")\n\n\t\t\t\t\tvar min = this.x - (this.anchorpointX - this.animationX);\n\t\t\t\t\tvar max = min + this.animationWidth;\n\t\t\t\t\txpos = Math.floor(Math.random()*(max-min+1)+min);\t\t\t\t\t\n\n\t\t\t\t\tmin = this.y - (this.anchorpointY - this.animationY);\n\t\t\t\t\tmax = min + this.animationHeight;\n\t\t\t\t\typos = Math.floor(Math.random()*(max-min+1)+min);\n\n\t\t\t\t\tgsGame.TriggerEvent(\"spawn_item\", 0, \"<type>explosion<\/type><posx>\" + xpos + \"<\/posx><posy>\" + ypos+ \"<\/posy><speedx>0<\/speedx><speedy>0<\/speedy><state>dying<\/state>\");\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"robot_dead\":\n\t\t\t\t\t// Don't do anything. Just sit there lookin busted.\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"dying\":\n\t\t\t\t\t// Fall off of the body. Ideally the pieces won't all fall at once so we'll have to stagger it through the duration of the dying frames?\n\t\t\t\t\tthis.moveToCoordinate(this.x - 10, 800, 10, 0, null);\n\t\t\t\t\tbreak;\n\t\t\t}",
+	"collided": "if (gsGame.worldObjects[idOfItemCollidedWith].name == \"playerBullet\"){\t\t\t\n\t\t\t\t// Take damage if you're: a robot OR a car with more than 50% maxHealth\n\t\t\t\tif (this.curState.indexOf(\"robot\") != -1 || (this.curState.indexOf(\"robot\") == -1 && this.health >= this.maxHealth/2)){\n\t\t\t\t\tgameEngine.soundArray[\"PlayerBulletHit\"].play();\n\t\t\t\t\tthis.health--;\n\t\t\t\t\tthis.gotHit = true;\n\t\t\t\t\tgsGame.lastHitEnemy = this.name;\n\t\t\t\t}\n\t\t\t}"
+}

@@ -1,0 +1,721 @@
+{
+	"id": -1,
+	"name": "player",
+	"spritesheet": ".\\Images\\SpriteSheet_Player.png",
+	"active": false,
+
+	"maxHealth": 100,
+	"health": 100,
+
+	"speedX" : 0,
+	"speedY" : 0,
+	"movementSpeed": 10,
+
+	"x": 0,
+	"y": 600,
+	"oldX" : 0,
+	"oldY" : 0,
+
+	"defaultState" : "idle",
+	"curState": "idle",
+	"curFrame": 0,
+	"frameTimer": 0,
+
+	"rateOfFire": 0.1,
+	"nextAvailableFireTime": 0,
+	"bulletType" : "playerBullet",
+
+	"states": {
+		"empty" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 525,
+						"y": 1947
+					},
+					"animation": {
+						"x": 463,
+						"y": 1901,
+						"width": 124,
+						"height": 100
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		},
+		"idle" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 1585
+					},
+					"animation": {
+						"x": 26,
+						"y": 1492,
+						"width": 146,
+						"height": 144
+					},
+					"hitbox": {
+						"x": 26,
+						"y": 1492,
+						"width": 146,
+						"height": 144
+					},
+					"bulletorigin": {
+						"x": 70,
+						"y": 1492
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 1585
+					},
+					"animation": {
+						"x": 195,
+						"y": 1492,
+						"width": 146,
+						"height": 144
+					},
+					"hitbox": {
+						"x": 195,
+						"y": 1492,
+						"width": 146,
+						"height": 144
+					},
+					"bulletorigin": {
+						"x": 239,
+						"y": 1492
+					}
+				}
+			]
+		},
+		"shoot_right" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 89
+					},
+					"animation": {
+						"x": 26,
+						"y": 14,
+						"width": 146,
+						"height": 125
+					},
+					"hitbox": {
+						"x": 26,
+						"y": 14,
+						"width": 146,
+						"height": 124
+					},
+					"bulletorigin": {
+						"x": 147,
+						"y": 46
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 89
+					},	
+					"animation": {
+						"x": 195,
+						"y": 14,
+						"width": 146,
+						"height": 125
+					},
+					"hitbox": {
+						"x": 195,
+						"y": 14,
+						"width": 146,
+						"height": 124
+					},
+					"bulletorigin": {
+						"x": 316,
+						"y": 46
+					}
+				}
+			]
+		},
+		"shoot_upright" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 276
+					},			
+					"animation": {
+						"x": 26,
+						"y": 190,
+						"width": 146,
+						"height": 137
+					},
+					"hitbox": {
+						"x": 26,
+						"y": 190,
+						"width": 146,
+						"height": 137
+					},
+					"bulletorigin": {
+						"x": 121,
+						"y": 191
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 276
+					},					
+					"animation": {
+						"x": 195,
+						"y": 190,
+						"width": 146,
+						"height": 137
+					},
+					"hitbox": {
+						"x": 195,
+						"y": 190,
+						"width": 146,
+						"height": 137
+					},
+					"bulletorigin": {
+						"x": 290,
+						"y": 191
+					}
+				}
+			]
+		},
+		"shoot_up" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 463
+					},	
+					"animation": {
+						"x": 30,
+						"y": 362,
+						"width": 142,
+						"height": 152
+					},
+					"hitbox": {
+						"x": 30,
+						"y": 362,
+						"width": 142,
+						"height": 152
+					},
+					"bulletorigin": {
+						"x": 80,
+						"y": 363
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 463
+					},	
+					"animation": {
+						"x": 189,
+						"y": 362,
+						"width": 152,
+						"height": 152
+					},
+					"hitbox": {
+						"x": 189,
+						"y": 362,
+						"width": 152,
+						"height": 152
+					},
+					"bulletorigin": {
+						"x": 249,
+						"y": 363
+					}
+				}
+			]
+		},
+		"shoot_upleft" : {
+			"frames": [
+				{
+					"duration": 0.2,
+						"anchorpoint": {
+							"x": 110,
+							"y": 650
+						},
+					"animation": {
+						"x": 9,
+						"y": 543,
+						"width": 163,
+						"height": 158
+					},
+					"hitbox": {
+						"x": 9,
+						"y": 543,
+						"width": 163,
+						"height": 158
+					},
+					"bulletorigin": {
+						"x": 10,
+						"y": 544
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 650
+					},					
+					"animation": {
+						"x": 178,
+						"y": 551,
+						"width": 163,
+						"height": 150
+					},
+					"hitbox": {
+						"x": 178,
+						"y": 551,
+						"width": 163,
+						"height": 150
+					},
+					"bulletorigin": {
+						"x": 179,
+						"y": 544
+					}
+				}
+			]
+		},
+		"shoot_left" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 837
+					},
+					"animation": {
+						"x": 4,
+						"y": 755,
+						"width": 168,
+						"height": 133
+					},
+					"hitbox": {
+						"x": 4,
+						"y": 755,
+						"width": 168,
+						"height": 133
+					},
+					"bulletorigin": {
+						"x": 5,
+						"y": 792
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 837
+					},
+					"animation": {
+						"x": 173,
+						"y": 750,
+						"width": 168,
+						"height": 138
+					},
+					"hitbox": {
+						"x": 173,
+						"y": 750,
+						"width": 168,
+						"height": 138
+					},
+					"bulletorigin": {
+						"x": 174,
+						"y": 792
+					}
+				}
+			]
+		},
+		"shoot_downleft" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 1024
+					},
+					"animation": {
+						"x": 18,
+						"y": 945,
+						"width": 154,
+						"height": 130
+					},
+					"hitbox": {
+						"x": 18,
+						"y": 945,
+						"width": 154,
+						"height": 130
+					},
+					"bulletorigin": {
+						"x": 19,
+						"y": 1026
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 1024
+					},					
+					"animation": {
+						"x": 187,
+						"y": 942,
+						"width": 154,
+						"height": 133
+					},
+					"hitbox": {
+						"x": 187,
+						"y": 942,
+						"width": 154,
+						"height": 133
+					},
+					"bulletorigin": {
+						"x": 188,
+						"y": 1026
+					}
+				}
+			]
+		},
+		"shoot_down" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 1211
+					},
+					"animation": {
+						"x": 27,
+						"y": 1126,
+						"width": 145,
+						"height": 136
+					},
+					"hitbox": {
+						"x": 27,
+						"y": 1126,
+						"width": 145,
+						"height": 136
+					},
+					"bulletorigin": {
+						"x": 88,
+						"y": 1230
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 1211
+					},
+					"animation": {
+						"x": 200,
+						"y": 1130,
+						"width": 141,
+						"height": 132
+					},
+					"hitbox": {
+						"x": 200,
+						"y": 1130,
+						"width": 141,
+						"height": 132
+					},
+					"bulletorigin": {
+						"x": 257,
+						"y": 1230
+					}
+				}
+			]
+		},
+		"shoot_downright" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 110,
+						"y": 1398
+					},
+					"animation": {
+						"x": 26,
+						"y": 1323,
+						"width": 146,
+						"height": 126
+					},
+					"hitbox": {
+						"x": 26,
+						"y": 1323,
+						"width": 146,
+						"height": 126
+					},
+					"bulletorigin": {
+						"x": 132,
+						"y": 1399
+					}
+				},
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 279,
+						"y": 1398
+					},
+					"animation": {
+						"x": 195,
+						"y": 1323,
+						"width": 146,
+						"height": 126
+					},
+					"hitbox": {
+						"x": 195,
+						"y": 1323,
+						"width": 146,
+						"height": 126
+					},
+					"bulletorigin": {
+						"x": 301,
+						"y": 1399
+					}
+				}
+			]
+		},
+		"stunned" : {
+			"frames": [
+				{
+					"duration": 0.8,
+					"anchorpoint": {
+						"x": 478,
+						"y": 1585
+					},
+					"animation": {
+						"x": 408,
+						"y": 1485,
+						"width": 132,
+						"height": 154
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"executeonfinish": [
+						"this.changeState('idle');"
+					]
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 401,
+						"y": 438
+					},
+					"animation": {
+						"x": 377,
+						"y": 403,
+						"width": 56,
+						"height": 65
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 498,
+						"y": 436
+					},
+					"animation": {
+						"x": 457,
+						"y": 387,
+						"width": 85,
+						"height": 93
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 417,
+						"y": 568
+					},
+					"animation": {
+						"x": 368,
+						"y": 516,
+						"width": 102,
+						"height": 101
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 528,
+						"y": 556
+					},
+					"animation": {
+						"x": 476,
+						"y": 509,
+						"width": 111,
+						"height": 105
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 431,
+						"y": 693
+					},
+					"animation": {
+						"x": 389,
+						"y": 652,
+						"width": 89,
+						"height": 86
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"executeonfinish": [
+						"if (gsGame.playerLives <= 0){",
+						"	gsGame.GameOver();",
+						"}",
+						"else{",
+						"	gsGame.playerLives--;",
+						"	console.log('Player Lives Left: ' + gsGame.playerLives);",
+						"	gsGame.playerObj.active = true;",
+						"	gsGame.playerObj.health = gsGame.playerObj.maxHealth;",
+						"	gsGame.playerRespawnTimer = gameEngine.GetCurrentTime();",
+						"	gsGame.playerIsRespawning = true;",
+						"	this.changeState('idle');",
+						"}"
+				}
+			]
+		}
+	},
+	"collided":  [
+		"if (!gsGame.playerIsRespawning){",
+		"	var nameOfItemCollidedWith = gsGame.worldObjects[idOfItemCollidedWith].name;",
+		"	switch(nameOfItemCollidedWith){",
+		"		case 'enemyMelee':",
+		"			var punchDistance = 30;",
+		"			if (gsGame.worldObjects[idOfItemCollidedWith].curState.indexOf('attack_down') > -1){",
+		"				// Make sure you don't punch the player beyond the limits",
+		"				if (gsGame.playerObj.y + punchDistance > gsGame.maxY){",
+		"					punchDistance = gsGame.maxY - gsGame.playerObj.y;",
+		"				}",
+		"				// Move the player the proper distance",
+		"				this.speedY = punchDistance;",
+		"				// Changed the state to Stunned",
+		"				this.changeState('stunned');",
+		"				// Set the gotHit flag",
+		"				this.gotHit = true;",
+		"				// Play the 'PlayerGotHit' sound",
+		"				gameEngine.soundArray['PlayerGotHit'].play();",
+		"				// Take damage",
+		"				if (!gsGame.playerInvincible &amp;&amp; !gameEngine.debugMode)",
+		"					this.health -= gsGame.worldObjects[idOfItemCollidedWith].baseDamage;",
+		"			}",
+		"			else if (gsGame.worldObjects[idOfItemCollidedWith].curState.indexOf("attack_up") > -1){",
+		"				// Make sure you don't punch the player beyond the limits",
+		"				if (gsGame.playerObj.y - punchDistance &lt; gsGame.minY){",
+		"					punchDistance = gsGame.playerObj.y - gsGame.minY;",
+		"				}",
+		"				// Move the player the proper distance",
+		"				this.speedY = -punchDistance;",
+		"				",
+		"				// Changed the state to Stunned",
+		"				this.changeState('stunned');",
+		"				// Set the gotHit flag",
+		"				this.gotHit = true;",
+		"				// Play the 'PlayerGotHit' sound",
+		"				gameEngine.soundArray['PlayerGotHit'].play();",
+		"				// Take damage",
+		"				if (!gsGame.playerInvincible &amp;&amp; !gameEngine.debugMode)",
+		"					this.health -= gsGame.worldObjects[idOfItemCollidedWith].baseDamage;",
+		"			}",
+		"			else{",
+		"				break;",
+		"			}",
+		"			break;",
+		"		case 'enemyGorilla':",
+		"		case 'enemyVehiclePink':",
+		"		case 'enemyVehicleYellow':",
+		"		case 'enemyVehicleBlack':",
+		"		case 'enemyVehicleBlue':",
+		"			// If the vehicles are in vehicle mode (meaning curState.indexOf('robot') == -1) AND they're not dying OR they're doing a fist smash then a touch by them will hurt",
+		"			if ((gsGame.worldObjects[idOfItemCollidedWith].curState.indexOf('robot') == -1 &amp;&amp; gsGame.worldObjects[idOfItemCollidedWith].curState != 'dying')|| gsGame.worldObjects[idOfItemCollidedWith].curState.indexOf('smash') != -1){",
+		"				if (!gsGame.playerInvincible &amp;&amp; !gameEngine.debugMode)",
+		"					this.health -= gsGame.worldObjects[idOfItemCollidedWith].baseDamage;",
+		"				// Changed the state to Stunned",
+		"				this.changeState('stunned');",
+		"				// Set the gotHit flag",
+		"				this.gotHit = true;",
+		"				// Play the 'PlayerGotHit' sound",
+		"				gameEngine.soundArray['PlayerGotHit'].play();",
+		"			}",
+		"			break;",
+		"		case 'barrel':",
+		"		case 'enemyMissile':",
+		"		case 'enemyBomberBullet':",
+		"		case 'barricadeConcrete':",
+		"		case 'barricadeLaser':",
+		"			// Decrement health",
+		"			if (!gsGame.playerInvincible &amp;&amp; !gameEngine.debugMode)",
+		"				this.health -= gsGame.worldObjects[idOfItemCollidedWith].baseDamage;",
+		"			// Changed the state to Stunned",
+		"			this.changeState('stunned');",
+		"			// Set the gotHit flag",
+		"			this.gotHit = true;",
+		"			// Play the 'PlayerGotHit' sound",
+		"			gameEngine.soundArray['PlayerGotHit'].play();",
+		"			break;",
+		"	}",
+		"}"
+	]
+}

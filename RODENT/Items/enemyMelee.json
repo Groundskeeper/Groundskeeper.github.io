@@ -1,0 +1,246 @@
+{
+	"name": "enemyMelee",
+	"spritesheet": ".\\Images\\SpriteSheet_EnemyMelee.png",
+	"maxHealth": 10,
+	"health": 10,
+	"basedmg": 5,
+	"x": 200,
+	"y": 200,
+	"movementSpeed": 5,
+	"active": false,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 63,
+						"y": 60
+					},
+					"animation": {
+						"x": 1,
+						"y": 12,
+						"width": 124,
+						"height": 99
+					},
+					"hitbox": {
+						"x": 1,
+						"y": 12,
+						"width": 124,
+						"height": 99
+					}
+				}
+			]
+		},
+		"empty" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 63,
+						"y": 192
+					},
+					"animation": {
+						"x": 1,
+						"y": 146,
+						"width": 124,
+						"height": 97
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+				   "duration": 0.1,
+				   "anchorpoint": {
+						"x": 24,
+						"y": 314
+				   },
+					"animation": {
+						"x": 0,
+						"y": 280,
+						"width": 56,
+						"height": 64
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 121,
+						"y": 313
+					},
+					"animation": {
+						"x": 81,
+						"y": 264,
+						"width": 85,
+						"height": 93
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 235,
+						"y": 310
+					},
+					"animation": {
+						"x": 186,
+						"y": 258,
+						"width": 102,
+						"height": 101
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 346,
+						"y": 298
+					},
+					"animation": {
+						"x": 294,
+						"y": 251,
+						"width": 111,
+						"height": 105
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 478,
+						"y": 304
+					},
+					"animation": {
+						"x": 435,
+						"y": 262,
+						"width": 91,
+						"height": 88
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		},
+		"attack_down" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 232,
+						"y": 60
+					},
+					"animation": {
+						"x": 170,
+						"y": 10,
+						"width": 124,
+						"height": 101
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.4,
+					"anchorpoint": {
+						"x": 401,
+						"y": 60
+					},
+					"animation": {
+						"x": 339,
+						"y": 13,
+						"width": 124,
+						"height": 98
+					},
+					"hitbox": {
+						"x": 339,
+						"y": 13,
+						"width": 124,
+						"height": 98
+					},
+					"executeonfinish": "this.changeState(\"idle\");"
+				}
+			]
+		},
+		"attack_up" : {
+			"frames": [
+				{
+					"duration": 0.2,
+					"anchorpoint": {
+						"x": 232,
+						"y": 192
+					},
+					"animation": {
+						"x": 170,
+						"y": 143,
+						"width": 124,
+						"height": 100
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.4,
+					"anchorpoint": {
+						"x": 401,
+						"y": 192
+					},
+					"animation": {
+						"x": 339,
+						"y": 132,
+						"width": 124,
+						"height": 111
+					},
+					"hitbox": {
+						"x": 339,
+						"y": 132,
+						"width": 124,
+						"height": 111
+					},
+					"executeonfinish": "this.changeState(\"idle\");"
+				}
+			]
+		}
+	},
+   "ai": "this.speedX = 0;\n\t\t\tthis.speedY = 0;\n\n\t\t\tif (this.curState.indexOf(\"idle\") != -1) {\n\t\t\t\tif (!gsGame.isCutscene){\n\t\t\t\t\tthis.moveToCoordinate(gsGame.playerObj.x, gsGame.playerObj.y, this.movementSpeed, 10, this.changeState.bind(this, \"attack_\" + (this.y > gsGame.playerObj.y ? \"up\" : \"down\")));\n\t\t\t\t}\n\t\t\t}\n\t\t\telse if (this.curState.indexOf(\"dying\") > -1 || this.curState.indexOf(\"empty\") > -1){\n\t\t\t\tthis.speedX = gsGame.backgroundSpeedX0;\n\t\t\t}",
+   "collided": "var nameOfItemCollidedWith = gsGame.worldObjects[idOfItemCollidedWith].name;\n\t\t\tswitch(nameOfItemCollidedWith){\n\t\t\t\tcase \"enemyBomberBullet\":\n\t\t\t\tcase \"playerBullet\":\n\t\t\t\t\t// Decrement health\n\t\t\t\t\tthis.health -= gsGame.worldObjects[idOfItemCollidedWith].baseDamage\n\t\t\t\t\tthis.gotHit = true;\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"enemyGorilla\":\n\t\t\t\tcase \"enemyMelee\":\n\t\t\t\t\t// Make sure you keep at least a minimum distance from each other so you all don't overlap on both the x AND y axis\n\n\t\t\t\t\tif (Math.abs(this.x - gsGame.worldObjects[idOfItemCollidedWith].x) <= 10){\n\t\t\t\t\t\t// If we're heading RIGHT\n\t\t\t\t\t\tif (this.speedX > 0){\n\t\t\t\t\t\t\t// If this one is the one that's BEHIND the other then this one needs to slow their roll\n\t\t\t\t\t\t\tif (this.x < gsGame.worldObjects[idOfItemCollidedWith].x)\n\t\t\t\t\t\t\t\tthis.x = this.oldX;\n\t\t\t\t\t\t}\n\t\t\t\t\t\t// Else if we're heading LEFT\n\t\t\t\t\t\tif (this.speedX < 0){\n\t\t\t\t\t\t\t// If this one is the one that's IN FRONT OF the other then this one needs to slow their roll\n\t\t\t\t\t\t\tif (this.x > gsGame.worldObjects[idOfItemCollidedWith].x)\n\t\t\t\t\t\t\t\tthis.x = this.oldX;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t\tif (Math.abs(this.y - gsGame.worldObjects[idOfItemCollidedWith].y) <= 10){\n\t\t\t\t\t\t// If we're heading DOWN\n\t\t\t\t\t\tif (this.speedY > 0){\n\t\t\t\t\t\t\t// If this one is the one that's ABOVE the other then this one needs to slow their roll\n\t\t\t\t\t\t\tif (this.y < gsGame.worldObjects[idOfItemCollidedWith].y)\n\t\t\t\t\t\t\t\tthis.y = this.oldY;\n\t\t\t\t\t\t}\n\t\t\t\t\t\t// Else if we're heading UP\n\t\t\t\t\t\tif (this.speedY < 0){\n\t\t\t\t\t\t\t// If this one is the one that's BELOW the other then this one needs to slow their roll\n\t\t\t\t\t\t\tif (this.y > gsGame.worldObjects[idOfItemCollidedWith].y)\n\t\t\t\t\t\t\t\tthis.y = this.oldY;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tbreak;\n\t\t\t\tcase \"barrel\":\n\t\t\t\tcase \"barricadeLaser\":\n\t\t\t\tcase \"barricadeConcrete\":\n\t\t\t\t\tthis.health = 0;\n\t\t\t\t\tthis.gotHit = true;\n\t\t\t\t\tbreak;\n\t\t\t}"
+}

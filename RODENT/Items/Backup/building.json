@@ -1,0 +1,515 @@
+{
+	"name": "building",
+	"spritesheet": ".\\Images\\SpriteSheet_Building.png",
+	"maxHealth": 1,
+	"health": 1,
+	"x": 671,
+	"y": 600,
+	"movementSpeed": 0,
+	"active": false,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 1.0,
+					"anchorpoint": {
+						"x": 671,
+						"y": 600
+					},
+					"animation": {
+						"x": 0,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 1343,
+						"y": 600
+					},
+					"animation": {
+						"x": 672,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2015,
+						"y": 600
+					},
+					"animation": {
+						"x": 1344,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 2687,
+						"y": 600
+					},
+					"animation": {
+						"x": 2016,
+						"y": 0,
+						"width": 671,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 3359,
+						"y": 600
+					},
+					"animation": {
+						"x": 2688,
+						"y": 0,
+						"width": 811,
+						"height": 674
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		}
+	},
+	"ai": "this.speedX = gsGame.backgroundSpeedX0;"
+}

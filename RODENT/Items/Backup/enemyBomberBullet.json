@@ -1,0 +1,60 @@
+{
+	"name": "enemyBomberBullet",
+	"spritesheet": ".\\Images\\SpriteSheet_EnemyBomber.png",
+	"maxHealth": 1,
+	"health": 1,
+	"basedmg": 10,
+	"x": 0,
+	"y": 0,
+	"movementSpeed": 20,
+	"active": false,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 0.02,
+					"anchorpoint": {
+						"x": 71,
+						"y": 1003
+					},
+					"animation": {
+						"x": 66,
+						"y": 982,
+						"width": 11,
+						"height": 42
+					},
+					"hitbox": {
+						"x": 66,
+						"y": 982,
+						"width": 11,
+						"height": 42
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 0,
+					"anchorpoint": {
+						"x": 0,
+						"y": 0
+					},
+					"animation": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		}
+	},
+	"collided": "this.health--;"
+}

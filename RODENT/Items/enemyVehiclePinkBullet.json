@@ -1,0 +1,117 @@
+{
+	"name": "enemyVehiclePinkBullet",
+	"spritesheet": ".\\Images\\SpriteSheet_VehiclesPink.png",
+	"maxHealth": 1,
+	"health": 1,
+	"basedmg": 20,
+	"x": 0,
+	"y": 0,
+	"movementSpeed": 10,
+	"active": false,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 1660,
+						"y": 28
+					},
+					"animation": {
+						"x": 1639,
+						"y": 4,
+						"width": 40,
+						"height": 41
+					},
+					"hitbox": {
+						"x": 1639,
+						"y": 4,
+						"width": 40,
+						"height": 41
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 1660,
+						"y": 65
+					},
+					"animation": {
+						"x": 1644,
+						"y": 44,
+						"width": 40,
+						"height": 41
+					},
+					"hitbox": {
+						"x": 1644,
+						"y": 44,
+						"width": 40,
+						"height": 41
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 1660,
+						"y": 99
+					},
+					"animation": {
+						"x": 1639,
+						"y": 83,
+						"width": 40,
+						"height": 41
+					},
+					"hitbox": {
+						"x": 1639,
+						"y": 83,
+						"width": 40,
+						"height": 41
+					}
+				},
+				{
+					"duration": 0.1,
+					"anchorpoint": {
+						"x": 1660,
+						"y": 147
+					},
+					"animation": {
+						"x": 1642,
+						"y": 123,
+						"width": 40,
+						"height": 41
+					},
+					"hitbox": {
+						"x": 1642,
+						"y": 123,
+						"width": 40,
+						"height": 41
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 0,
+					"anchorpoint": {
+						"x": 0,
+						"y": 0
+					},
+					"animation": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		}
+	},
+	"collided": "if (gsGame.worldObjects[idOfItemCollidedWith].name == \"player\"){\n\t\t\t\tthis.health--;\n\t\t\t}"
+}

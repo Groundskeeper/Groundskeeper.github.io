@@ -1,0 +1,102 @@
+<credits>
+	<!-- These first THREE slides are the FAKE credits. Their duration needs to be however long between us STARTING the rollCredits and us ENDING the rollCredits -->
+	<slide>
+		<!-- <duration>2000</duration> -->
+		<duration>2</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>40</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>\n\n\n\nA Willow Tree Production</text>
+	</slide>
+	<slide>
+		<!-- <duration>2000</duration> -->
+		<duration>2</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>40</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>\n\n\n\nStarring</text>
+	</slide>
+	<slide>
+		<!-- <duration>2000</duration> -->
+		<duration>2</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>35</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>\n\n\n\nMicks Bunny as the Rabbit\nand\nBuggy Mouse as the Mouse</text>
+	</slide>
+	<slide>
+		<!-- <duration>4000</duration> -->
+		<duration>4</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>20</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>William Low\n-----------\nGame Designer\nGame Director\nHead Writer\nLead Engine Programmer\nLead Menu Programmer\nLead Gameplay Programmer\nLead Tester\nLead Character Design\nLead Character Artist\nLead Background Artist</text>
+	</slide>
+	<slide>
+		<!-- <duration>2000</duration> -->
+		<duration>2</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>20</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>Deployment Lead\n----------\nJacob Ciango\n\nAdditional Testers\n------------------\nSeth Ciango</text>
+	</slide>
+	<slide>
+		<!-- <duration>3000</duration> -->
+		<duration>3</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>20</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>Sound Effects sampled from the following existing works:\n* Mike Tyson's Punch-Out\n* Street Fighter II\n* Super C\n* Super Mario Brothers\n\n(No copyright infringement intended)</text>
+	</slide>
+	<slide>
+		<!-- <duration>4000</duration> -->
+		<duration>4</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>20</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>left</alignment>
+		<text>Bonfire\nWritten By: Gareth McFrillen, Rob Swire\nPerformed By: Knife Party\nUsed without permission\n(No copyright infringement intended)\n\n\nFaded\nWritten By: Alan Walker, Jesper Borgen, Mood Melodies, Gunnar Greve\nPerformed By: Alan Walker\nUsed without permission\n(No copyright infringement intended)</text>
+	</slide>
+	<slide>
+		<!-- <duration>3000</duration> -->
+		<duration>3</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>20</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>\nTools and Libraries Used\n------------------------------\nAudacity (https://www.audacityteam.org)\nGoogle Fonts (https://fonts.google.com)\nNotepad++ (https://notepad-plus-plus.org)\nW3Schools (https://www.w3schools.com)</text>
+	</slide>
+	<slide>
+		<!-- <duration>5000</duration> -->
+		<duration>5</duration>
+		<status>new</status>
+		<font>Arial</font>
+		<fontsize>20</fontsize>
+		<fontcolor>white</fontcolor>
+		<alignment>center</alignment>
+		<text>Special Thanks and Acknowledgements\n-----------------------------------\nMom and Dad\nAlice and Ed\nAndrew, Rick, Jacob and Seth\nKarri\nMalcolm and Beverly\nAnd the rest - you know who you are!</text>
+	</slide>
+	<slide>
+		<duration>0</duration>
+		<status>new</status>
+		<font>Titillium Web</font>
+		<fontsize>50</fontsize>
+		<fontcolor>black</fontcolor>
+		<alignment>center</alignment>
+		<text>\n\n\nThank You For Playing!</text>
+	</slide>
+</credits>

@@ -1,0 +1,79 @@
+{
+	"name": "barricadeLaser",
+	"spritesheet": ".\\Images\\SpriteSheet_Barricades.png",
+	"maxHealth": 5,
+	"health": 5,
+	"basedmg": 30,
+	"x": 100,
+	"y": 400,
+	"movementSpeed": 0,
+	"active": false,
+	"states": {
+		"idle" : {
+			"frames": [
+				{
+					"duration": 0.06,
+					"anchorpoint": {
+						"x": 92,
+						"y": 156
+					},
+					"animation": {
+						"x": 2,
+						"y": 1,
+						"width": 176,
+						"height": 308
+					},
+					"hitbox": {
+						"x": 2,
+						"y": 90,
+						"width": 176,
+						"height": 218
+					}
+				},
+				{
+					"duration": 0.6,
+					"anchorpoint": {
+						"x": 300,
+						"y": 156
+					},
+					"animation": {
+						"x": 210,
+						"y": 1,
+						"width": 176,
+						"height": 308
+					},
+					"hitbox": {
+						"x": 210,
+						"y": 90,
+						"width": 176,
+						"height": 218
+					}
+				}
+			]
+		},
+		"dying" : {
+			"frames": [
+				{
+					"duration": 2.0,
+					"anchorpoint": {
+						"x": 508,
+						"y": 156
+					},
+					"animation": {
+						"x": 418,
+						"y": 1,
+						"width": 176,
+						"height": 308
+					},
+					"hitbox": {
+						"x": 0,
+						"y": 0,
+						"width": 0,
+						"height": 0
+					}
+				}
+			]
+		}
+	},
+	"collided": "var nameOfItemCollidedWith = gsGame.worldObjects[idOfItemCollidedWith].name;\n\t\t\tif (nameOfItemCollidedWith == \"player\" || nameOfItemCollidedWith == \"enemyMelee\" || nameOfItemCollidedWith == \"enemyGorilla\"){\n\t\t\t\tthis.health = 0;\n\t\t\t\tthis.gotHit = true;\n\t\t\t}\n\t\t\telse if (nameOfItemCollidedWith.indexOf(\"Bullet\") != -1){\n\t\t\t\tthis.health --;\n\t\t\t\tthis.gotHit = true;\n\t\t\t}"
+}
